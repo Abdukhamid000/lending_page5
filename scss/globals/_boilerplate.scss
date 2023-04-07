@@ -11,6 +11,23 @@ html {
   padding: 0;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  cursor: pointer;
 }

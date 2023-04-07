@@ -1,8 +1,184 @@
-@forward "globals";
+@import "globals";
+
+.btn {
+    background: linear-gradient(138.1deg, #63E1D9 -49.34%, #34A0CD 100%);
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15925);
+    border-radius: 28px;
+    padding: 19px 95px;
+    font-family: $fontRaleway;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: $mainBackground;
+    color: $white;
+}
+
+main {
+    background: url('../assets/images/bg-curvy-desktop.svg') no-repeat;
+}
+
+header {
+    padding-top: 73px;
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: $fontRaleway;
+
+        &__menu {
+            display: flex;
+            align-items: center;
+            gap: 57px;
+        }
+
+    }
+}
+
+.intro {
+    padding-top: 75px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 36px;
+
+    &__heading {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 60px;
+        text-align: center;
+        font-family: $fontRaleway;
+    }
+
+    &__text {
+        margin-top: 32px;
+        font-family: $fontOpensans;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+    }
 
 
-.grid {
-    &__btn {
-        color: red;
+}
+
+.benefits {
+    margin-top: 158px;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+
+        &>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 14px;
+            border: 1px solid red;
+        }
+    }
+
+    &__heading {
+        margin: 27px 0 8px 0;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+    }
+}
+
+.stay-productive {
+    padding-top: 137px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 57px;
+    }
+
+    &__heading {
+        font-family: $fontRaleway;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    &__text {
+        font-family: $fontOpensans;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 19px;
+    }
+}
+
+.team {
+    padding-top: 179px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .card {
+        font-family: $fontOpensans;
+        cursor: pointer;
+        padding: 40px 24.7px 26px 26px;
+        background: #202A3C;
+        box-shadow: 5px 5px 8px 4px rgba(56, 56, 56, 0.0991282);
+        border-radius: 3.93258px;
+
+        &__content p {
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+
+        }
+
+        &__bottom {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        img {
+            border-radius: 50%;
+        }
+
+        &__user-name {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            span {
+
+                font-weight: 700;
+                font-size: 10px;
+                line-height: 12px;
+                letter-spacing: 0.5px;
+            }
+
+            small {
+                margin-top: 4px;
+                font-size: 7px;
+                line-height: 10px;
+                letter-spacing: 0.5px;
+            }
+        }
     }
 }
