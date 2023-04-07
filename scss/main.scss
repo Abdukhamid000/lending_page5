@@ -6,6 +6,13 @@
     border-radius: 28px;
     padding: 19px 95px;
     font-family: $fontRaleway;
+    transition: 0.5s ease;
+}
+
+.btn:hover.btn-state-active {
+    background: #8ADAE3;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15925);
+    border-radius: 28px;
 }
 
 body {
@@ -21,6 +28,12 @@ main {
 header {
     padding-top: 73px;
 
+    .logo {
+        @media(max-width: 835px) {
+            width: 80px;
+        }
+    }
+
     .navbar {
         display: flex;
         align-items: center;
@@ -31,6 +44,10 @@ header {
             display: flex;
             align-items: center;
             gap: 57px;
+
+            @media(max-width: 835px) {
+                gap: 30px;
+            }
         }
 
     }
@@ -67,11 +84,17 @@ header {
 .benefits {
     margin-top: 158px;
 
+
+
     .container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-content: center;
         align-items: center;
+
+        @media(max-width: 835px) {
+            grid-template-columns: 1fr;
+        }
 
         &>div {
             display: flex;
@@ -79,7 +102,6 @@ header {
             justify-content: center;
             align-items: center;
             padding-top: 14px;
-            border: 1px solid red;
         }
     }
 
@@ -106,6 +128,10 @@ header {
         align-items: center;
         justify-content: center;
         gap: 57px;
+
+        @media(max-width: 835px) {
+            flex-direction: column;
+        }
     }
 
     &__heading {
@@ -113,6 +139,10 @@ header {
         font-weight: 700;
         font-size: 40px;
         line-height: 50px;
+
+        @media(max-width: 835px) {
+            text-align: center;
+        }
     }
 
     &__text {
@@ -121,26 +151,46 @@ header {
         font-size: 16px;
         line-height: 24px;
         margin-top: 19px;
+
+        @media(max-width: 835px) {
+            text-align: center;
+        }
     }
 }
 
 .team {
     padding-top: 179px;
+    padding-bottom: 201px;
+
 
     .container {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 40px;
+
+
+        @media(max-width: 835px) {
+            flex-direction: column;
+        }
     }
 
     .card {
+        position: relative;
         font-family: $fontOpensans;
         cursor: pointer;
         padding: 40px 24.7px 26px 26px;
         background: #202A3C;
         box-shadow: 5px 5px 8px 4px rgba(56, 56, 56, 0.0991282);
         border-radius: 3.93258px;
+
+        .queote {
+            z-index: -1;
+            position: absolute;
+            left: -34px;
+            top: -34px;
+            width: 79px;
+        }
 
         &__content p {
             font-size: 14px;
@@ -180,5 +230,104 @@ header {
                 letter-spacing: 0.5px;
             }
         }
+    }
+}
+
+
+.early-access {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__card {
+        padding: 42px 77px;
+        background: $emailSigupBackground;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: $fontRaleway;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    p {
+        font-family: $fontOpensans;
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+    }
+
+    .early-access__input {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 38px;
+        gap: 29px;
+
+        @media(max-width: 835px) {
+            flex-direction: column;
+        }
+
+        input {
+            background: #FFFFFF;
+            box-shadow: 2px 3px 6px rgba(7, 4, 59, 0.157043);
+            border-radius: 24px;
+            padding: 16px 0 16px 38px;
+
+        }
+
+        button {
+            display: block;
+            padding: 15px 26px;
+        }
+    }
+}
+
+footer {
+    padding-top: 169px;
+    background: $footerBackground;
+    font-family: $fontOpensans;
+    padding-bottom: 53px;
+}
+
+.footer-wrapper {
+
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    .location {
+        display: flex;
+        align-items: start;
+        gap: 27px;
+
+        p {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .email {
+        margin-top: 19px;
+
+    }
+
+    ul {
+        li:not(:first-child) {
+            margin-top: 16px;
+        }
+    }
+
+    .cocial-icons img {
+        margin-right: 11px;
     }
 }
