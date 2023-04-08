@@ -11,8 +11,6 @@
 
 .btn:hover.btn-state-active {
     background: #8ADAE3;
-    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15925);
-    border-radius: 28px;
 }
 
 body {
@@ -28,17 +26,23 @@ main {
 header {
     padding-top: 73px;
 
-    .logo {
-        @media(max-width: 835px) {
-            width: 80px;
-        }
-    }
 
     .navbar {
         display: flex;
         align-items: center;
         justify-content: space-between;
         font-family: $fontRaleway;
+
+        .logo {
+            img {
+                display: flex;
+
+                @media(max-width: 835px) {
+                    width: 80px;
+                }
+            }
+        }
+
 
         &__menu {
             display: flex;
@@ -48,6 +52,26 @@ header {
             @media(max-width: 835px) {
                 gap: 30px;
             }
+        }
+
+        &__link {
+            position: relative;
+
+            &::after {
+                content: "";
+                transition: 0.3s ease;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: $white;
+                width: 0%;
+                height: 2px;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+
         }
 
     }
@@ -67,6 +91,11 @@ header {
         line-height: 60px;
         text-align: center;
         font-family: $fontRaleway;
+
+        @media(max-width: 840px) {
+            font-size: 24px;
+            line-height: 36px;
+        }
     }
 
     &__text {
@@ -76,6 +105,11 @@ header {
         font-size: 20px;
         line-height: 30px;
         text-align: center;
+
+        @media(max-width: 840px) {
+            font-size: 14px;
+            line-height: 21px;
+        }
     }
 
 
@@ -142,6 +176,8 @@ header {
 
         @media(max-width: 835px) {
             text-align: center;
+            font-size: 18px;
+            line-height: 24px;
         }
     }
 
@@ -154,6 +190,8 @@ header {
 
         @media(max-width: 835px) {
             text-align: center;
+            font-size: 14px;
+            line-height: 21px;
         }
     }
 }
@@ -235,6 +273,7 @@ header {
 
 
 .early-access {
+
     .container {
         display: flex;
         align-items: center;
@@ -243,7 +282,14 @@ header {
 
     &__card {
         padding: 42px 77px;
+        margin-bottom: -75px;
         background: $emailSigupBackground;
+
+        @media(max-width:840px) {
+
+            padding: 20px;
+
+        }
     }
 
     h1 {
@@ -277,7 +323,11 @@ header {
             box-shadow: 2px 3px 6px rgba(7, 4, 59, 0.157043);
             border-radius: 24px;
             padding: 16px 0 16px 38px;
-
+            width: 480px;
+            outline: none;
+            @media(max-width: 835px) { 
+                width: 100%;
+            }
         }
 
         button {
@@ -299,6 +349,13 @@ footer {
     display: flex;
     align-items: start;
     justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    @media(max-width: 799px) {
+        flex-direction: column;
+
+    }
 
     .location {
         display: flex;
